@@ -1,0 +1,19 @@
+.job_details_container {
+  background-color: #64748b;
+  color: white;
+  font-family: 'Roboto';
+}
+
+.image_role_rating_container {
+  display: flex;
+  justify-content: flex-start;
+}
+.location_type_package_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.location_type_container {
+  display: flex;
+  justify-content: flex-start;
+}
