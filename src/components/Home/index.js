@@ -7,8 +7,8 @@ const Home = () => (
     <Header />
     <div className="home_container">
       <div className="home_content">
-        <h1>Find The Job That Fits Your Life</h1>
-        <p>
+        <h1 className="Home_heading">Find The Job That Fits Your Life</h1>
+        <p className="Home_para">
           Millions of people are searching for jobs, salary information, company
           reviews. Find the job that fits your abilities and potential.
         </p>

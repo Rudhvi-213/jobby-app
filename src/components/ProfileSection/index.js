@@ -2,6 +2,8 @@ import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 
+import './index.css'
+
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
@@ -67,10 +69,10 @@ class ProfileSection extends Component {
     const {jobDetails} = this.state
     const {name, profileImageUrl, shortBio} = jobDetails
     return (
-      <div>
+      <div className="">
         <img src={profileImageUrl} alt="profile" />
-        <h1>{name}</h1>
-        <p>{shortBio}</p>
+        <h1 className="profile_heading">{name}</h1>
+        <p className="profile_para">{shortBio}</p>
       </div>
     )
   }
@@ -91,7 +93,7 @@ class ProfileSection extends Component {
   }
 
   render() {
-    return <div>{this.switchApiStatus()}</div>
+    return <div className="Profile_container">{this.switchApiStatus()}</div>
   }
 }
 

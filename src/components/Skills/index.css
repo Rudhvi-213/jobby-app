@@ -1,0 +1,28 @@
+.skill_list_container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.skill_list {
+  width: 30%;
+}
+
+.skill_icon_container {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .skill_list {
+    min-width: 50%;
+  }
+}

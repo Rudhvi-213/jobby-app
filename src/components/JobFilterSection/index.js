@@ -37,12 +37,13 @@ const JobFilterSection = props => {
     <div className="job_filter_container">
       <ProfileSection />
       <hr />
-      <div>
+      <div className="filter_container">
         <h1>Type of Employment</h1>
-        <ul>
+        <ul className="filter_list_container">
           {employmentTypesList.map(eachType => (
             <li key={eachType.employmentTypeId}>
               <input
+                className="list_input_checkbox"
                 value={eachType.employmentTypeId}
                 type="checkbox"
                 id={eachType.employmentTypeId}
@@ -56,12 +57,13 @@ const JobFilterSection = props => {
         </ul>
       </div>
       <hr />
-      <div>
+      <div className="filter_container">
         <h1>Salary Range</h1>
         <ul>
           {salaryRangesList.map(eachType => (
             <li key={eachType.salaryRangeId}>
               <input
+                className="list_input"
                 value={eachType.salaryRangeId}
                 type="radio"
                 checked={activeSalaryTag === eachType.salaryRangeId}
@@ -73,7 +75,6 @@ const JobFilterSection = props => {
           ))}
         </ul>
       </div>
-      <hr />
     </div>
   )
 }

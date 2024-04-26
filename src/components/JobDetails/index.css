@@ -1,0 +1,107 @@
+.job_detailed_page_container {
+  background-color: black;
+  padding: 30px;
+}
+.job_detailed_container {
+  background-color: #202020;
+  color: white;
+  font-family: 'Roboto';
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.job_item_link {
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+p {
+  margin: 0;
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+a {
+  margin: 0;
+  font-size: 20px;
+}
+
+.image_role_rating_container {
+  margin-bottom: 20px;
+}
+
+.role_rating_heading {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 20px;
+}
+
+.icon_container {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.star_icon {
+  color: yellow;
+}
+
+.image_role_rating_container {
+  display: flex;
+  justify-content: flex-start;
+}
+.location_type_package_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.location_type_container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.description_container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.description_url_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.description_para {
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+.life_at_container {
+  margin-top: 40px;
+}
+
+.description_img_container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .description_img_container {
+    flex-direction: column;
+  }
+}

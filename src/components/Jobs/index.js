@@ -141,7 +141,7 @@ class Jobs extends Component {
   onClickRetry = () => this.getFilteredJobs()
 
   renderFailureView = () => (
-    <div className="products-error-view-container">
+    <div className="job_fetch_failure_container">
       <img
         src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
         alt="failure view"
@@ -153,7 +153,11 @@ class Jobs extends Component {
       <p className="products-failure-description">
         We cannot seem to find the page you are looking for
       </p>
-      <button onClick={this.getFilteredJobs} type="button">
+      <button
+        className="retry_oops_button"
+        onClick={this.getFilteredJobs}
+        type="button"
+      >
         Retry
       </button>
     </div>
@@ -197,13 +201,35 @@ class Jobs extends Component {
       <>
         <Header />
         <div className="jobs_route_container">
-          <JobFilterSection
-            employmentTypesList={employmentTypesList}
-            salaryRangesList={salaryRangesList}
-            changeEmploymentType={this.changeEmploymentType}
-            changeSalaryRange={this.changeSalaryRange}
-            activeSalaryTag={activeSalaryRangeId}
-          />
+          <div className="mobile_search_input_container">
+            <input
+              value={searchInput}
+              type="search"
+              className="search-input"
+              placeholder="Search"
+              onChange={this.onChangeSearchInput}
+              onKeyDown={this.onEnterSearchInput}
+            />
+
+            <button
+              className="search_button"
+              data-testid="searchButton"
+              onClick={this.getFilteredJobs}
+              aria-label="Search"
+              type="button"
+            >
+              <BsSearch className="search-icon" />
+            </button>
+          </div>
+          <div className="filter_container">
+            <JobFilterSection
+              employmentTypesList={employmentTypesList}
+              salaryRangesList={salaryRangesList}
+              changeEmploymentType={this.changeEmploymentType}
+              changeSalaryRange={this.changeSalaryRange}
+              activeSalaryTag={activeSalaryRangeId}
+            />
+          </div>
           <div className="render_container">
             <div className="search-input-container">
               <input
@@ -216,14 +242,14 @@ class Jobs extends Component {
               />
 
               <button
+                className="search_button"
                 data-testid="searchButton"
+                aria-label="Search"
                 onClick={this.getFilteredJobs}
                 type="button"
               >
-                Search
+                <BsSearch className="search-icon" />
               </button>
-
-              <BsSearch className="search-icon" />
             </div>
             {this.renderCheckApiStatus()}
           </div>

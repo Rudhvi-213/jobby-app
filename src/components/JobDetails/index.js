@@ -1,6 +1,9 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
+import {FaStar} from 'react-icons/fa'
+import {MdWork} from 'react-icons/md'
+import {IoLocationSharp} from 'react-icons/io5'
 
 import Skills from '../Skills'
 import SimilarJobs from '../SimilarJobs'
@@ -107,25 +110,30 @@ class JobDetails extends Component {
       companyWebsiteUrl,
     } = jobDetails
     return (
-      <div className="job_details_container">
+      <div className="job_detailed_container">
         <div className="role_thumbnail">
           <div className="image_role_rating_container">
-            <img src={companyLogoUrl} alt="job details company logo" />
-            <div>
-              <h1>{title} </h1>
-              <div>
+            <img
+              height="80px"
+              src={companyLogoUrl}
+              alt="job details company logo"
+            />
+            <div className="role_rating_heading">
+              <h1>{title}</h1>
+              <div className="icon_container">
+                <FaStar className="star_icon" />
                 <p>{rating}</p>
               </div>
             </div>
           </div>
           <div className="location_type_package_container">
             <div className="location_type_container">
-              <div>
-                {/* <icon /> */}
+              <div className="icon_container">
+                <IoLocationSharp className />
                 <p>{location}</p>
               </div>
-              <div>
-                {/* <icon /> */}
+              <div className="icon_container">
+                <MdWork />
                 <p>{employmentType}</p>
               </div>
             </div>
@@ -133,18 +141,18 @@ class JobDetails extends Component {
           </div>
         </div>
         <hr />
-        <div>
-          <div>
+        <div className="description_container">
+          <div className="description_url_container">
             <h1>Description</h1>
             <a href={companyWebsiteUrl}>Visit</a>
           </div>
-          <p>{jobDescription}</p>
+          <p className="description_para">{jobDescription}</p>
         </div>
         <Skills skills={skills} />
-        <div>
+        <div className="life_at_container">
           <h1>Life at Company</h1>
-          <div>
-            <p>{lifeAtCompany.description}</p>
+          <div className="description_img_container">
+            <p className="description_para">{lifeAtCompany.description}</p>
             <img src={lifeAtCompany.imageUrl} alt="life at company" />
           </div>
         </div>
@@ -207,7 +215,9 @@ class JobDetails extends Component {
     return (
       <>
         <Header />
-        {this.renderJobDetailsApiStatus()}
+        <div className="job_detailed_page_container">
+          {this.renderJobDetailsApiStatus()}
+        </div>
       </>
     )
   }

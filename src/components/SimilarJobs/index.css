@@ -1,0 +1,22 @@
+.similar_jobs_container {
+  color: aliceblue;
+  margin-top: 50px;
+}
+
+.similar_jobs_heading {
+  font-size: 50px;
+}
+
+.similar_jobs_list_container {
+  max-width: 1300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .similar_jobs_list {
+    width: 100%;
+  }
+}

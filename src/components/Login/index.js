@@ -110,6 +110,11 @@ class Login extends Component {
                 Login
               </button>
               {showErrorText && <p className="error_msg">{errorMsg}</p>}
+              <p className="test_para">
+                For Testing <br />
+                Username: rahul <br />
+                Password: rahul@2021
+              </p>
             </form>
           </div>
         </div>

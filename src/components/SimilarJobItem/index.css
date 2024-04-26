@@ -1,0 +1,9 @@
+.similar_jobs_list {
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .similar_jobs_list {
+    width: 100%;
+  }
+}

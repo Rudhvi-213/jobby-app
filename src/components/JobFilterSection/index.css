@@ -1,4 +1,25 @@
 .job_filter_container {
   color: aliceblue;
-  width: 30%;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.list_input {
+  cursor: pointer;
+}
+
+.filter_container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin: 10px 0;
+}
+
+label {
+  margin-left: 5px;
 }
